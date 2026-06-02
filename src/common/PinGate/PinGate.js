@@ -3,8 +3,9 @@
 const React = require('react');
 const styles = require('./styles');
 
+/* global __PIN_CODE__ */
 const SESSION_KEY = 'pin_unlocked';
-const REQUIRED_PIN = process.env.PIN_CODE;
+const REQUIRED_PIN = __PIN_CODE__;
 
 const PinGate = ({ children }) => {
     const [unlocked, setUnlocked] = React.useState(() => {

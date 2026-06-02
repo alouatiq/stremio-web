@@ -211,12 +211,14 @@ module.exports = (env, argv) => ({
         new webpack.ProgressPlugin(),
         new webpack.EnvironmentPlugin({
             SENTRY_DSN: null,
-            PIN_CODE: null,
             ...env,
             SERVICE_WORKER_DISABLED: false,
             DEBUG: argv.mode !== 'production',
             VERSION: packageJson.version,
             COMMIT_HASH
+        }),
+        new webpack.DefinePlugin({
+            '__PIN_CODE__': JSON.stringify(process.env.PIN_CODE || null)
         }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer']

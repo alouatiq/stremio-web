@@ -1,0 +1,89 @@
+// Copyright (C) 2017-2024 Smart code 203358507
+
+@import (reference) '~@stremio/stremio-colors/less/stremio-colors.less';
+
+.pin-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: @color-background-dark5;
+
+    .pin-gate-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 3.2rem;
+        background-color: @color-background-dark3;
+        border-radius: 1rem;
+        min-width: 30rem;
+
+        .pin-gate-logo {
+            width: 6rem;
+            height: 6rem;
+            background-image: url('/images/stremio-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .pin-gate-title {
+            color: @color-surface-light5-90;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .pin-gate-form {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.8rem;
+            width: 100%;
+
+            .pin-gate-input {
+                padding: 1rem 1.4rem;
+                border-radius: 0.6rem;
+                border: 0.1rem solid @color-background-dark1;
+                background-color: @color-background-dark4;
+                color: @color-surface-light5-90;
+                font-size: 1.6rem;
+                text-align: center;
+                letter-spacing: 0.4rem;
+                outline: none;
+
+                &:focus {
+                    border-color: @color-accent3;
+                }
+
+                &.pin-gate-input-error {
+                    border-color: @color-signal-warning;
+                }
+            }
+
+            .pin-gate-error {
+                color: @color-signal-warning;
+                font-size: 1.2rem;
+                text-align: center;
+                margin: 0;
+            }
+
+            .pin-gate-button {
+                padding: 1rem;
+                border-radius: 0.6rem;
+                border: none;
+                background-color: @color-accent3;
+                color: @color-background-dark5;
+                font-size: 1.4rem;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

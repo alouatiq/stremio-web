@@ -35,7 +35,6 @@ const PinGate = ({ children }) => {
     return (
         <div className={styles['pin-gate']}>
             <div className={styles['pin-gate-box']}>
-                <div className={styles['pin-gate-logo']} />
                 <p className={styles['pin-gate-title']}>Enter PIN to continue</p>
                 <form className={styles['pin-gate-form']} onSubmit={handleSubmit}>
                     <input
